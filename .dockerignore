@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.git
+.github
+coverage
+README.md
+manual-operaciones.md
+guia-instalacion.md
+documentacion-pipeline.md

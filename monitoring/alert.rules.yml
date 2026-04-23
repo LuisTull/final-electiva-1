@@ -1,0 +1,20 @@
+groups:
+  - name: app-alerts
+    rules:
+      - alert: AppDown
+        expr: up{job="app"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "La aplicacion no responde"
+          description: "El target app:3000 lleva mas de 1 minuto caido"
+
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{status_code=~"5.."}[2m]) > 0.1
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Tasa de errores 5xx alta"
+          description: "La API reporta errores 5xx sobre el umbral definido"

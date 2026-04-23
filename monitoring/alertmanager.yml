@@ -1,0 +1,11 @@
+route:
+  receiver: default
+  group_by: [alertname, severity]
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 1h
+
+receivers:
+  - name: default
+
+# Para notificaciones reales, agregar webhook/email/slack en receivers.

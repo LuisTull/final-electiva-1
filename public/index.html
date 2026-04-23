@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevOps Demo App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>DevOps Demo App</h1>
+        <p>Aplicacion de ejemplo con CI/CD, Docker, pruebas y monitoreo.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Agregar Item</h2>
+        <form id="item-form">
+          <input id="item-name" name="name" placeholder="Nombre del item" maxlength="120" required />
+          <button type="submit">Guardar</button>
+        </form>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Items</h2>
+        <ul id="item-list"></ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
